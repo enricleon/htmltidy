@@ -147,7 +147,7 @@ function chooseExec() {
     default:
         throw new Error('unsupported execution platform');
   }
-  tidyExe = path.join(__dirname, 'bin', tidyExe);
+  tidyExe = path.join(__dirname, '..\..\bin', tidyExe);
 
   var existsSync = fs.existsSync||path.existsSync; // node > 0.6
   if (!existsSync(tidyExe))
